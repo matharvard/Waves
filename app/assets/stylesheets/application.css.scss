@@ -1,0 +1,161 @@
+/*
+ * Waves
+ *= require_self
+*/
+
+/* RESET ------------------------------------------------------------------- */
+@import "reset.css.scss";
+
+/* BASE -------------------------------------------------------------------- */
+body {
+  background:#fff;
+  color:#999;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:16px;
+  line-height:24px;
+}
+
+a,
+a:visited {
+  color:rgba(7, 115, 188, 1.0);
+  text-decoration:none;
+}
+
+a:focus,
+a:hover,
+a:active {
+color:rgba(7, 115, 188, 0.5);
+  text-decoration:none;
+}
+
+#content {
+  width:420px;
+  margin:0 auto;
+}
+
+/* HEADER ------------------------------------------------------------------ */
+header {
+  padding:48px;
+  
+  h1 {
+    font-size:24px;
+    font-weight:normal;
+    text-align:center;
+    text-transform:lowercase;
+    
+    a,
+    a:visited {
+      color:rgba(7, 115, 188, 0.5);
+      text-decoration:none;
+    }
+
+    a:focus,
+    a:hover,
+    a:active {
+      color:rgba(7, 115, 188, 0.8);
+      text-decoration:none;
+    }
+  }
+}
+
+/* POST -------------------------------------------------------------------- */
+@import "posts.css.scss";
+
+/* FOOTER ------------------------------------------------------------------ */
+footer {
+  width:420px;
+  margin:48px auto;
+  
+  p {
+    font-size:12px;
+  }
+}
+
+/* FORMS ------------------------------------------------------------------- */
+form {
+  
+}
+
+dl.form {
+  
+}
+
+dl.form dt {
+  
+}
+
+dl.form dt label {
+  
+}
+
+dl.form dd {
+  
+}
+
+dl.form dd input.text_field {
+  width:100%;
+  background:rgba(0, 0, 0, 0.05);
+  box-sizing:border-box;
+  font-family:inherit;
+  font-size:inherit;
+  line-height:1;
+  border:1px solid rgba(0, 0, 0, 0.05);
+  border-radius:3px;
+  padding:6px;
+  color:inherit;
+}
+
+dl.form dd input:focus {
+  outline:none;
+  box-shadow:0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+dl.form dd textarea.text_area {
+  width:100%;
+  background:rgba(0, 0, 0, 0.05);
+  box-sizing:border-box;
+  font-family:inherit;
+  font-size:inherit;
+  line-height:1;
+  border:1px solid rgba(0, 0, 0, 0.05);
+  border-radius:3px;
+  padding:6px;
+  color:inherit;
+}
+
+dl.form dd textarea:focus {
+  outline:none;
+  box-shadow:0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+dl.form dd textarea.code {
+  font-family:Consolas, monospace;
+}
+
+/* FLASH ------------------------------------------------------------------- */
+.flash {
+  position:absolute;
+  top:24px;
+  right:24px;
+  height:24px;
+  background:rgba(0, 0, 0, 0.1);
+  border:1px solid rgba(0, 0, 0, 0.2);
+  border-radius:3px;
+  box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+  
+  p {
+    padding:0 12px;
+    font-size:12px;
+    font-weight:bold;
+  }
+}
+
+.notice {
+  color:rgba(0, 0, 0, 0.8);
+  text-shadow:1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.alert {
+  color:rgba(200, 0, 0, 0.8);
+  text-shadow:1px 1px 1px rgba(0, 0, 0, 0.8);
+}

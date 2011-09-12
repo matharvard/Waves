@@ -1,0 +1,19 @@
+<dl class="form">
+  <% if f.object.image.size != nil %>
+    <dt>
+      <%= image_tag post_image_path(f.object, f.object.image.name), :alt => f.object.title, :style => "width:420px;" %>
+    </dt>
+  <% end %>
+  
+  <dt><%= f.label :image %></dt>
+  <dd><%= f.file_field :image %></dd>
+  
+  <dt><%= f.label :title %></dt>
+  <dd><%= f.text_field :title, :class => "text_field" %></dd>
+  
+  <dt><%= f.label :url, "URL" %></dt>
+  <dd><%= f.text_field :url, :class => "text_field" %></dd>
+  
+  <dt><%= f.label :description %></dt>
+  <dd><%= f.text_area :description, :class => "text_area", :rows => 6 %></dd>
+</dl>

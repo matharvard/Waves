@@ -1,0 +1,134 @@
+.post {
+  position:relative;
+  
+  & + .post {
+    margin-top:24px;
+  }
+  
+  aside {
+    display:block;
+    position:absolute;
+    left:-96px;
+    width:72px;
+    height:24px;
+    text-align:right;
+    
+    time {
+      text-transform:uppercase;
+      font-size:11px;
+      font-weight:bold;
+    }
+    
+    .permalink {
+      font-family:"Helvetica Neue", Helvetica, sans-serif;
+      font-weight:bold;
+      line-height:8px;
+      margin-left:4px;
+    }
+  }
+  
+  .manage {
+    position:absolute;
+    right:-72px;
+    width:48px;
+    height:24px;
+    font-size:12px;
+    border-top-right-radius:12px;
+    border-bottom-right-radius:12px;
+    background:-webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0%, rgba(0, 0, 0, 0)),
+      color-stop(100%, rgba(0, 0, 0, 0.1))
+    );
+  }
+}
+
+/* ARTICLE ----------------------------------------------------------------- */
+.article {
+  h2 {
+    font-size:20px;
+    font-weight:normal;
+    margin-bottom:24px;
+  }
+  
+  p + p {
+    margin-top:24px;
+  }
+}
+
+/* LINK -------------------------------------------------------------------- */
+.link {
+  p a {
+    padding-right:0.5em;
+  }
+}
+
+/* QUOTE ------------------------------------------------------------------- */
+.quote {
+  p {
+    font-size:20px;
+    font-weight:bold;
+    color:#454545;
+    
+    &:before {
+      content:'\201c';
+    }
+    
+    &:after {
+      content:'\201d';
+    }
+  }
+}
+
+/* CHAT -------------------------------------------------------------------- */
+.chat {
+  ol {
+    list-style:none;
+    
+    li {
+      margin-bottom:1px;
+      line-height:23px;
+      background:rgba(0, 0, 0, 0.05);
+      padding:0 0.5em;
+      
+      &:first-child {
+        border-top-left-radius:8px;
+        border-top-right-radius:8px;
+      }
+      
+      &:last-child {
+        border-bottom-left-radius:8px;
+        border-bottom-right-radius:8px;
+      }
+      
+      span.author {
+        color:#454545;
+        font-weight:bold;
+      }
+    }
+  }
+}
+
+/* IMAGE ------------------------------------------------------------------- */
+.image {
+  img {
+    width:400px;
+    padding:10px;
+    background:rgba(0, 0, 0, 0.05);
+    border-radius:8px;
+  }
+}
+
+/* SNIPPET ----------------------------------------------------------------- */
+.snippet {
+  pre code {
+    display:block;
+    font-size:14px;
+    font-family:Consolas, monospace;
+    padding:20px;
+    background:rgba(0, 0, 0, 0.05);
+    border-radius:8px;
+  }
+}

@@ -1,0 +1,15 @@
+<%= form_for :session, :url => session_path do |f| %>
+  <%= f.error_messages %>
+  
+  <dl class="form">
+    <dt><%= f.label :email %></dt>
+    <dd><%= f.text_field :email, :class => "text_field" %></dd>
+    
+    <dt><%= f.label :password %></dt>
+    <dd><%= f.password_field :password, :class => "text_field" %></dd>
+  </dl>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div> <!-- end.actions -->
+<% end %>

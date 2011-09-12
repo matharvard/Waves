@@ -1,0 +1,18 @@
+<%= content_tag_for :article, post, :class => "post" do %>
+  <aside>
+    <%= date_for(post.created_at) %>
+    <%= permalink_to(post) %>
+  </aside>
+  
+  <%= manage_links_for(post) %>
+  
+  <%= raw post.body %>
+  
+  <% if !post.source.blank? && !post.url.blank? %>
+    <%= link_to post.source, post.url %>
+  <% elsif !post.source.blank? && post.url.blank? %>
+    <%= post.source %>
+  <% elsif post.source.blank? && !post.url.blank? %>
+    <%= link_to post.url, post.url %>
+  <% end %>
+<% end %>

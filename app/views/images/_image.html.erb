@@ -1,0 +1,22 @@
+<article class="post <%= post.type %>">
+  <aside>
+    <%= date_for(post.created_at) %>
+    <%= permalink_to(post) %>
+  </aside>
+  
+  <%= manage_links_for(post) %>
+  
+  <%= image_tag post_image_path(post, post.image.name), :alt => post.title %>
+  
+  <% if !post.title.blank? %>
+    <h2>
+      <% if !post.url.blank? %>
+        <%= link_to post.title, post.url %>
+      <% else %>
+        <%= post.title %>
+      <% end %>
+    </h2>
+  <% end %>
+  
+  <%= raw post.description %>
+</article>

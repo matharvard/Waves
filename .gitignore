@@ -1,0 +1,7 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+config/initializers/email_settings.rb
+config/initializers/secret_token.rb

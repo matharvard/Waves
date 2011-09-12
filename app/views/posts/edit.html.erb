@@ -1,0 +1,10 @@
+<%= form_for @post, :url => post_path(@post) do |f| %>
+  <%= hidden_field_tag :post_type, @post.type %>
+  <%= f.error_messages %>
+  
+  <%= form_fields_for @post, f %>
+  
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div> <!-- end.actions -->
+<% end %>

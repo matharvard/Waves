@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Waves</title>
+    <%= auto_discovery_link_tag :atom, posts_url(:format => :atom), { :title => "Atom Feed" } %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <% if flash %>
+      <% flash.each do |k, v| %>
+        <div class="flash <%= k %>">
+          <p><%= v %></p>
+        </div> <!-- end.flash -->
+      <% end %>
+    <% end %>
+    
+    <header>
+      <h1>
+        <%= link_to "The Orange Seed", root_path %>
+      </h1>
+    </header>
+    
+    <div id="content">
+      <%= yield %>
+    </div> <!-- end#content -->
+    
+    <footer>
+      <p>&copy; 2011 Mat Harvard</p>
+    </footer>
+  </body>
+</html>

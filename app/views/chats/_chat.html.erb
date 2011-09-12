@@ -1,0 +1,16 @@
+<%= content_tag_for :article, post, :class => "post" do %>
+  <aside>
+    <%= date_for(post.created_at) %>
+    <%= permalink_to(post) %>
+  </aside>
+  
+  <%= manage_links_for(post) %>
+  
+  <% if !post.source.blank? %>
+    <h2><%= raw post.source %></h2>
+  <% end %>
+  
+  <ol>
+    <%= raw parse_chat_for(post) %>
+  </ol>
+<% end %>

@@ -1,0 +1,14 @@
+<%= content_tag_for :article, post, :class => "post" do %>
+  <aside>
+    <%= date_for(post.created_at) %>
+    <%= permalink_to(post) %>
+  </aside>
+  
+  <%= manage_links_for(post) %>
+  
+  <% if !post.title.blank? %>
+    <h2><%= post.title %></h2>
+  <% end %>
+  
+  <pre><code><%= post.code %></code></pre>
+<% end %>
