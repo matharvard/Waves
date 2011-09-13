@@ -9,10 +9,10 @@
   <%= raw post.body %>
   
   <% if !post.source.blank? && !post.url.blank? %>
-    <%= link_to post.source, post.url %>
+    <%= link_to post.source, post.url, :target => "_blank" %>
   <% elsif !post.source.blank? && post.url.blank? %>
     <%= post.source %>
   <% elsif post.source.blank? && !post.url.blank? %>
-    <%= link_to post.url, post.url %>
+    <%= link_to post.url, post.url, :target => "_blank" %>
   <% end %>
 <% end %>

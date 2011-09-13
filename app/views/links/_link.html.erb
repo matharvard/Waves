@@ -8,9 +8,9 @@
   
   <p>
     <% unless post.name.blank? %>
-      <%= link_to post.name, post.url %>
+      <%= link_to post.name, post.url, :target => "_blank" %>
     <% else %>
-      <%= link_to post.url, post.url %>
+      <%= link_to post.url, post.url, :target => "_blank" %>
     <% end %>
 
     <%= post.description %>
