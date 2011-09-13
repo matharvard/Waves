@@ -1,5 +1,5 @@
 atom_feed do |feed|
-  feed.title "Mat Harvard"
+  feed.title "Waves"
   feed.updated_at @posts.first.created_at
   
   for post in @posts
@@ -7,7 +7,7 @@ atom_feed do |feed|
       atom_template_for(entry, post)
       
       entry.author do |author|
-        author.name "MH"
+        author.name "Waves"
       end
     end
   end
