@@ -3,6 +3,10 @@
  *= require_self
 */
 
+$font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size:16px;
+$line-height:24px;
+
 /* RESET ------------------------------------------------------------------- */
 @import "reset.css.scss";
 
@@ -10,9 +14,9 @@
 body {
   background:#fff;
   color:#999;
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:16px;
-  line-height:24px;
+  font-family:$font-family;
+  font-size:$font-size;
+  line-height:$line-height;
 }
 
 a,
@@ -35,10 +39,10 @@ color:rgba(7, 115, 188, 0.5);
 
 /* HEADER ------------------------------------------------------------------ */
 header {
-  padding:48px;
+  padding:($line-height * 2);
   
   h1 {
-    font-size:24px;
+    font-size:$line-height;
     font-weight:normal;
     text-align:center;
     text-transform:lowercase;
@@ -64,10 +68,10 @@ header {
 /* FOOTER ------------------------------------------------------------------ */
 footer {
   width:420px;
-  margin:48px auto;
+  margin:($line-height * 2) auto;
   
   p {
-    font-size:12px;
+    font-size:($line-height / 2);
   }
 }
 
@@ -133,29 +137,4 @@ dl.form dd textarea.code {
 }
 
 /* FLASH ------------------------------------------------------------------- */
-.flash {
-  position:absolute;
-  top:24px;
-  right:24px;
-  height:24px;
-  background:rgba(0, 0, 0, 0.1);
-  border:1px solid rgba(0, 0, 0, 0.2);
-  border-radius:3px;
-  box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
-  
-  p {
-    padding:0 12px;
-    font-size:12px;
-    font-weight:bold;
-  }
-}
-
-.notice {
-  color:rgba(0, 0, 0, 0.8);
-  text-shadow:1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.alert {
-  color:rgba(200, 0, 0, 0.8);
-  text-shadow:1px 1px 1px rgba(0, 0, 0, 0.8);
-}
+@import "flash.css.scss";
